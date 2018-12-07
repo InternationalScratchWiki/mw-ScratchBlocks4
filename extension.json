@@ -14,14 +14,14 @@
 		"Scratchblock4Hook": "ScratchblockHooks.php"
 	},
 	"ExtensionFunctions": [
-		"Scratchblock4Hook::sbSetup"
+		"Scratchblock4Hook::sb4Setup"
 	],
 	"ResourceModules": {
 		"ext.scratchBlocks": {
 			"scripts": [
 				"js/scratchblocks-v4-min.js",
 				"js/translations-v4-min.js",
-				"run_scratchblocks.js"
+				"run_scratchblocks4.js"
 			],
 			"styles": "/inline.css",
 			"dependencies": []
@@ -33,10 +33,10 @@
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
-			"Scratchblock4Hook::sbParserInit"
+			"Scratchblock4Hook::sb4ParserInit"
 		],
 		"ResourceLoaderGetConfigVars": [
-			"Scratchblock4Hook::sbReadLS"
+			"Scratchblock4Hook::sb4ReadLS"
 		]
 	},
 	"MessagesDirs": {
