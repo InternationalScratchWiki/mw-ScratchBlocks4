@@ -1,25 +1,26 @@
 {
-	"name": "Scratchblocks",
-	"version": 3.1,
+	"name": "Scratchblocks for Scratch 3.0",
+	"version": "3.1-scratch3.1.0",
 	"author": [
 		"ErnieParke",
-		"blob8108"
+		"blob8108",
+		"apple502j"
 	],
-	"url": "https://github.com/tjvr/wiki-scratchblocks",
-	"description": "This plugin takes text-based Scratch code and renders it in a graphical format.",
+	"url": "https://github.com/apple502j/mw-ScratchBlocks4",
+	"descriptionmsg": "sb3-desc",
 	"license-name": "MIT",
 	"type": "parserhook",
 	"AutoloadClasses": {
-		"ScratchblockHook": "ScratchblockHooks.php"
+		"Scratchblock4Hook": "ScratchblockHooks.php"
 	},
 	"ExtensionFunctions": [
-		"ScratchblockHook::sbSetup"
+		"Scratchblock4Hook::sbSetup"
 	],
 	"ResourceModules": {
 		"ext.scratchBlocks": {
 			"scripts": [
-				"scratchblocks/src/scratchblocks.js",
-				"scratchblocks/src/translations.js",
+				"js/scratchblocks-v4-min.js",
+				"js/translations-v4-min.js",
 				"run_scratchblocks.js"
 			],
 			"styles": "/inline.css",
@@ -28,12 +29,23 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteExtPath": "ScratchBlocks"
+		"remoteExtPath": "ScratchBlocks4"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
-			"ScratchblockHook::sbParserInit"
+			"Scratchblock4Hook::sbParserInit"
+		],
+		"ResourceLoaderGetConfigVars": [
+			"Scratchblock4Hook::sbReadLS"
 		]
 	},
+	"MessagesDirs": {
+		"ScratchBlocks4": [
+			"i18n"
+		]
+	},
+	"config": {
+        "ScratchBlocks4Lang": "en"
+    },
 	"manifest_version": 1
 }

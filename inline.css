@@ -1,3 +1,8 @@
-code.blocks {
+code.sb4blocks {
 	display:inline-block;
+}
+
+.sb4blocks {
+	border:none;
+	background-color:inherit;
 }
