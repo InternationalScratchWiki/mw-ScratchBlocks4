@@ -17,7 +17,7 @@
 		"Scratchblock4Hook::sb4Setup"
 	],
 	"ResourceModules": {
-		"ext.scratchBlocks": {
+		"ext.scratchBlocks4": {
 			"scripts": [
 				"js/scratchblocks-v4-min.js",
 				"js/translations-v4-min.js",
