@@ -11,14 +11,14 @@ def file_request(fileobj, path):
     for block in req.iter_content(1024):
         fileobj.write(block)
 
-with open("./js/scratchblocks-v4-min.js","w") as sb:
+with open("./js/scratchblocks-v4-min.js","wb") as sb:
     file_request(sb, "https://raw.githubusercontent.com/scratchblocks/scratchblocks.github.io/master/js/scratchblocks-v4-min.js")
 
-with open("./js/translations-v4-min.js","w") as sb:
+with open("./js/translations-v4-min.js","wb") as sb:
     file_request(sb, "https://raw.githubusercontent.com/scratchblocks/scratchblocks.github.io/master/js/translations-v4-min.js")
 
-with open("./js/scratchblocks-v4-min.js","w") as sb:
+with open("./js/scratchblocks-v4-min.js","r+",encoding="utf-8") as sb:
     sb.write(sb.read().replace("scratchblocks","scratchblocks4",3))
 
-with open("./js/translations-v4-min.js","w") as sb:
+with open("./js/translations-v4-min.js","r+",encoding="utf-8") as sb:
     sb.write(sb.read().replace("scratchblocks","scratchblocks4",1))
