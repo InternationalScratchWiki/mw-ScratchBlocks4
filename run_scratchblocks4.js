@@ -7,7 +7,6 @@ for (const block of document.querySelectorAll("pre.sb4blocks, code.sb4blocks")) 
 	block.appendChild(svg);
 }
 
-for (const blockSVG of document.querySelectorAll("code.sb4blocks svg")) {
-    /* quick fix for the inline */
-    blockSVG.height.baseVal.value *= 0.85;
+for (const blockSVG of document.querySelectorAll("code.sb4blocks.fixme svg")) {
+    blockSVG.height.baseVal.value -= 30;
 }

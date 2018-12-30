@@ -18,7 +18,7 @@ with open("./js/translations-v4-min.js","wb") as sb:
     file_request(sb, "https://raw.githubusercontent.com/scratchblocks/scratchblocks.github.io/master/js/translations-v4-min.js")
 
 with open("./js/scratchblocks-v4-min.js","r+",encoding="utf-8") as sb:
-    sb.write(sb.read().replace("scratchblocks","scratchblocks4",3))
+    sb.write(sb.read().replace("scratchblocks","scratchblocks4"))
 
 with open("./js/translations-v4-min.js","r+",encoding="utf-8") as sb:
-    sb.write(sb.read().replace("scratchblocks","scratchblocks4",1))
+    sb.write(sb.read().replace("scratchblocks","scratchblocks4"))

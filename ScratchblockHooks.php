@@ -23,12 +23,20 @@ class Scratchblock4Hook {
 
 	// Output HTML for <scratchblocks> tag
 	public static function sb4RenderTag ($input, array $args, Parser $parser, PPFrame $frame) {
-		return '<pre class="sb4blocks">' . htmlspecialchars($input) . '</pre>';
+		$fixme = '';
+		if (array_key_exists('fixme', $args)) {
+			$fixme = 'fixme';
+		}
+		return '<pre class="sb4blocks ' . $fixme . '">' . htmlspecialchars($input) . '</pre>';
 	}
 
 	// Output HTML for inline <sb> tag
 	public static function sb4RenderInlineTag ($input, array $args, Parser $parser, PPFrame $frame) {
-		return '<code class="sb4blocks">' . htmlspecialchars($input) . '</code>';
+		$fixme = '';
+		if (array_key_exists('fixme', $args)) {
+			$fixme = 'fixme';
+		}
+		return '<code class="sb4blocks ' . $fixme . '">' . htmlspecialchars($input) . '</code>';
 	}
 }
 ?>
