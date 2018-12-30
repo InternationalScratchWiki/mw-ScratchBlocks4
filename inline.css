@@ -1,8 +1,8 @@
-code.sb4blocks {
+code.blocks {
 	display:inline-block;
 }
 
-.sb4blocks {
+.blocks {
 	border:none;
 	background-color:inherit;
 }

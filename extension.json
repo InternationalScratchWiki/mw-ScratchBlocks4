@@ -1,6 +1,5 @@
 {
-	"name": "Scratchblocks for Scratch 3.0",
-	"version": "3.1-scratch3.1.0",
+	"name": "ScratchBlocks4",
 	"author": [
 		"ErnieParke",
 		"blob8108",
@@ -19,8 +18,6 @@
 	"ResourceModules": {
 		"ext.scratchBlocks4": {
 			"scripts": [
-				"js/scratchblocks-v4-min.js",
-				"js/translations-v4-min.js",
 				"run_scratchblocks4.js"
 			],
 			"styles": "/inline.css",
@@ -29,7 +26,7 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteExtPath": "ScratchBlocks4"
+		"remoteExtPath": "mw-ScratchBlocks4"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
@@ -45,7 +42,7 @@
 		]
 	},
 	"config": {
-        "ScratchBlocks4Lang": "en"
-    },
+		"ScratchBlocks4Lang": []
+	},
 	"manifest_version": 1
 }
