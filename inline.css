@@ -6,3 +6,8 @@ code.blocks {
 	border:none;
 	background-color:inherit;
 }
+
+.sb4blocks > svg {
+	transform: scale(0.675);
+	transform-origin: 0px 0px 0px;
+}

@@ -6,7 +6,3 @@ window.addEventListener('load', function(){
 	scratchblocks.renderMatching('pre.blocks', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3'});
 	scratchblocks.renderMatching('code.blocks', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3', inline: true});
 });
-//for (const blockSVG of document.querySelectorAll("code.sb4blocks svg")) {
-    /* quick fix for the inline */
-//    blockSVG.height.baseVal.value *= 0.85;
-//}
