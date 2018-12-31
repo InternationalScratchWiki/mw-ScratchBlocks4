@@ -7,7 +7,7 @@ code.blocks {
 	background-color:inherit;
 }
 
-.sb4blocks > svg {
+.scratchblocks > svg {
 	transform: scale(0.675);
 	transform-origin: 0px 0px 0px;
 }
