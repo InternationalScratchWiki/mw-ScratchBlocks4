@@ -1,13 +1,8 @@
 code.blocks {
-	display:inline-block;
+	display: inline-block;
 }
 
 .blocks {
-	border:none;
-	background-color:inherit;
-}
-
-.scratchblocks > svg {
-	transform: scale(0.675);
-	transform-origin: 0px 0px 0px;
+	border: none;
+	background-color: inherit;
 }
