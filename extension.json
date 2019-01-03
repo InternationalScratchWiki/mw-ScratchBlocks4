@@ -42,7 +42,7 @@
 		]
 	},
 	"config": {
-		"ScratchBlocks4Lang": []
+		"ScratchBlocks4Langs": []
 	},
 	"manifest_version": 1
 }
