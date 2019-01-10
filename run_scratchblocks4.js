@@ -10,8 +10,8 @@ window.addEventListener('load', function(){
 	for (var i = items.length; i--;) {
 		item = items[i];
 		item.viewBox.baseVal.width = item.width.baseVal.value;
-		item.viewBox.baseVal.height = item.height.baseVal.value;
-		item.style.width = item.width.baseVal.value * 0.675;
-		item.style.height = item.height.baseVal.value * 0.675;
+		item.viewBox.baseVal.height = item.children[1].getBoundingClientRect().height;
+		item.width.baseVal.value *= 0.675;
+		item.height.baseVal.value = item.viewBox.baseVal.height * 0.675;
 	}
 });
