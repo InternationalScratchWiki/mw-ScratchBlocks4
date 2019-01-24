@@ -1,6 +1,6 @@
 $.when(
-	mw.loader.load('https://scratchblocks.github.io/js/scratchblocks-v4-min.js'),
-	mw.loader.load('https://scratchblocks.github.io/js/translations-all-v4-min.js')
+	mw.loader.load('https://scratchblocks.github.io/js/scratchblocks-v3.3-min.js'),
+	mw.loader.load('https://scratchblocks.github.io/js/translations-all-v3.3.js')
 );
 var scratchblocks_rendered = false;
 function run_scratchblocks() {
