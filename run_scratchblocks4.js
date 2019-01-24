@@ -6,6 +6,7 @@ var scratchblocks_rendered = false;
 function run_scratchblocks() {
 	if (scratchblocks_rendered) {
 		window.removeEventListener('focus', run_scratchblocks);
+		window.removeEventListener('load', run_scratchblocks);
 		return;
 	}
 	scratchblocks.renderMatching('pre.blocks', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3'});
@@ -21,6 +22,7 @@ function run_scratchblocks() {
 	}
 	scratchblocks_rendered = true;
 	window.removeEventListener('focus', run_scratchblocks);
+	window.removeEventListener('load', run_scratchblocks);
 }
 window.addEventListener('focus', run_scratchblocks);
 window.addEventListener('load', run_scratchblocks);
