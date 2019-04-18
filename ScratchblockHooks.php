@@ -21,14 +21,28 @@ class Scratchblock4Hook {
 		$wgOut->addModules('ext.scratchBlocks4');
 	}
 
+	public static function sb4RenderTagGeneric($input, array $args, $tag) {
+		return (
+			'<'
+			. $tag
+			. ' class="blocks'
+			. (isset($args['version']) ? '-' . htmlspecialchars($args['version']) : '')
+			. '">'
+			. htmlspecialchars($input)
+			. '</'
+			. $tag
+			. '>'
+		);
+	}
+
 	// Output HTML for <scratchblocks> tag
 	public static function sb4RenderTag ($input, array $args, Parser $parser, PPFrame $frame) {
-		return '<pre class="blocks">' . htmlspecialchars($input) . '</pre>';
+		return self::sb4RenderTagGeneric($input, $args, 'pre');
 	}
 
 	// Output HTML for inline <sb> tag
 	public static function sb4RenderInlineTag ($input, array $args, Parser $parser, PPFrame $frame) {
-		return '<code class="blocks">' . htmlspecialchars($input) . '</code>';
+		return self::sb4RenderTagGeneric($input, $args, 'code');
 	}
 }
 ?>
