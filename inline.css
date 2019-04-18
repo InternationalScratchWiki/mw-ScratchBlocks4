@@ -1,8 +1,8 @@
-code.blocks {
+code[class^=blocks] {
 	display: inline-block;
 }
 
-.blocks {
+#content [class^=blocks] {
 	border: none;
 	background-color: inherit;
 	overflow-x: auto;
