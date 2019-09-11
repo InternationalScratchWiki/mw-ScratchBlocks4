@@ -12,6 +12,6 @@ function run_scratchblocks() {
 		item.height.baseVal.value = item.viewBox.baseVal.height * 0.675;
 	}
 }
-$.getScript('https://scratchblocks.github.io/js/scratchblocks-v3.3-min.js').done(function(){
-	$.getScript('https://scratchblocks.github.io/js/translations-all-v3.3.js').done(run_scratchblocks);
+$.getScript('https://scratchblocks.github.io/js/scratchblocks-v3.4-min.js').done(function(){
+	$.getScript('https://scratchblocks.github.io/js/translations-all-v3.4.js').done(run_scratchblocks);
 });
