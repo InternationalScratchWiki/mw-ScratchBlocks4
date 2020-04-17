@@ -3,9 +3,10 @@
 	"author": [
 		"ErnieParke",
 		"blob8108",
-		"apple502j"
+		"apple502j",
+		"kenny2github"
 	],
-	"url": "https://github.com/apple502j/mw-ScratchBlocks4",
+	"url": "https://github.com/InternationalScratchWiki/mw-ScratchBlocks4",
 	"descriptionmsg": "sb3-desc",
 	"license-name": "MIT",
 	"type": "parserhook",
