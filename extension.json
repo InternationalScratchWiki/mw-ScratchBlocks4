@@ -23,6 +23,22 @@
 			],
 			"styles": "/inline.css",
 			"dependencies": []
+		},
+		"ext.scratchBlocks4.ve": {
+			"scripts": [
+				"scratchblocks4.ve.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.desktopArticleTarget",
+				"oojs-ui-core",
+				"user.options"
+			],
+			"messages": [
+				"sb3-ve-reload",
+				"sb3-ve-block",
+				"sb3-ve-inline"
+			],
+			"targets": ["desktop"]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -30,12 +46,9 @@
 		"remoteExtPath": "mw-ScratchBlocks4"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"Scratchblock4Hook::sb4ParserInit"
-		],
-		"ResourceLoaderGetConfigVars": [
-			"Scratchblock4Hook::sb4ReadLS"
-		]
+		"ParserFirstCallInit": "Scratchblock4Hook::sb4ParserInit",
+		"ResourceLoaderGetConfigVars": "Scratchblock4Hook::sb4ReadLS",
+		"GetPreferences": "Scratchblock4Hook::onGetPreferences"
 	},
 	"MessagesDirs": {
 		"ScratchBlocks4": [
@@ -44,6 +57,12 @@
 	},
 	"config": {
 		"ScratchBlocks4Langs": []
+	},
+	"VisualEditorPluginModules": [
+		"ext.scratchBlocks4.ve"
+	],
+	"DefaultUserOptions": {
+		"sb3-ve-auto-reload": true
 	},
 	"manifest_version": 1
 }

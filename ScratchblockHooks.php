@@ -25,7 +25,7 @@ class Scratchblock4Hook {
 		return (
 			'<'
 			. $tag
-			. ' class="blocks'
+			. ' class="needsRendering blocks'
 			. (isset($args['version']) ? '-' . htmlspecialchars($args['version']) : '')
 			. '">'
 			. htmlspecialchars($input)
@@ -43,6 +43,16 @@ class Scratchblock4Hook {
 	// Output HTML for inline <sb> tag
 	public static function sb4RenderInlineTag ($input, array $args, Parser $parser, PPFrame $frame) {
 		return self::sb4RenderTagGeneric($input, $args, 'code');
+	}
+	
+	public static function onGetPreferences($user, &$preferences) {
+
+		$preferences['sb3-ve-auto-reload'] = [
+			'type' => 'toggle',
+			'label-message' => 'sb3-ve-auto-reload',
+			'section' => 'editing/advancedediting'
+		];
+		return true;
 	}
 }
 ?>

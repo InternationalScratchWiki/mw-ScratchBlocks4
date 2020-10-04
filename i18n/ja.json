@@ -1,0 +1,9 @@
+{
+	"sb3-desc":"Scratch 3.0のブロックを表示する拡張機能。",
+	
+	"sb3-ve-reload": "Scratchブロックを再読み込み",
+	"sb3-ve-block": "Scratch スクリプト",
+	"sb3-ve-inline": "Scratch ブロック",
+	
+	"sb3-ve-auto-reload": "VisualEditor内で、Scratchブロックを自動的に再描画する"
+}

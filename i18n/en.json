@@ -1,3 +1,9 @@
 {
-	"sb3-desc":"An extension to display Scratch 3.0 blocks."
+	"sb3-desc":"An extension to display Scratch 3.0 blocks.",
+	
+	"sb3-ve-reload": "Reload Scratch blocks",
+	"sb3-ve-block": "Scratch script",
+	"sb3-ve-inline": "Scratch block",
+	
+	"sb3-ve-auto-reload": "Automatically render Scratch blocks inside VisualEditor"
 }
