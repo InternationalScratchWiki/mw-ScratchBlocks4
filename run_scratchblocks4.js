@@ -3,8 +3,8 @@ function run_scratchblocks() {
 	if (defaultType !== 'scratch3' || defaultType !== 'scratch2') throw Error('Invalid setting for window.scratchBlocksDefaultVersion')
 	scratchblocks.renderMatching('pre.blocks', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: defaultType});
 	scratchblocks.renderMatching('code.blocks', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: defaultType});
-	scratchblocks.renderMatching('pre.blocks, pre[class^=blocks-3]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3'});
-	scratchblocks.renderMatching('code.blocks, code[class^=blocks-3]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3', inline: true});
+	scratchblocks.renderMatching('pre[class^=blocks-3]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3'});
+	scratchblocks.renderMatching('code[class^=blocks-3]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3', inline: true});
 	scratchblocks.renderMatching('pre[class^=blocks-2]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch2'});
 	scratchblocks.renderMatching('code[class^=blocks-2]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch2', inline: true});
 	var items = document.querySelectorAll('.blocks .scratchblocks svg, [class^=blocks-3] .scratchblocks svg');
