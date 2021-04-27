@@ -1,4 +1,8 @@
 function run_scratchblocks() {
+	let defaultType = window.scratchBlocksDefaultVersion || 'scratch3'
+	if (defaultType !== 'scratch3' || defaultType !== 'scratch2') throw Error('Invalid setting for window.scratchBlocksDefaultVersion')
+	scratchblocks.renderMatching('pre.blocks', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: defaultType});
+	scratchblocks.renderMatching('code.blocks', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: defaultType});
 	scratchblocks.renderMatching('pre.blocks, pre[class^=blocks-3]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3'});
 	scratchblocks.renderMatching('code.blocks, code[class^=blocks-3]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch3', inline: true});
 	scratchblocks.renderMatching('pre[class^=blocks-2]', {languages: ['en'].concat(mw.config.get('wgScratchBlocks4Langs')), style: 'scratch2'});
