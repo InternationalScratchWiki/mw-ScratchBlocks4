@@ -43,7 +43,8 @@
 		]
 	},
 	"config": {
-		"ScratchBlocks4Langs": []
+		"ScratchBlocks4Langs": [],
+		"ScratchBlocks4BlockVersion": "3.0"
 	},
 	"manifest_version": 1
 }
