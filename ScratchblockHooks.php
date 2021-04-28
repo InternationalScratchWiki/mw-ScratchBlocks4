@@ -11,8 +11,9 @@ class Scratchblock4Hook {
 	}
 
 	public static function sb4ReadLS (array &$vars) {
-		global $wgScratchBlocks4Langs;
+		global $wgScratchBlocks4Langs, $wgScratchBlocks4BlockVersion;
 		$vars['wgScratchBlocks4Langs'] = $wgScratchBlocks4Langs;
+		$vars['wgScratchBlocks4BlockVersion'] = $wgScratchBlocks4BlockVersion;
 		return true;
 	}
 
