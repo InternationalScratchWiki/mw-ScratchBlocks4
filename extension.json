@@ -13,9 +13,6 @@
 	"AutoloadClasses": {
 		"Scratchblock4Hook": "ScratchblockHooks.php"
 	},
-	"ExtensionFunctions": [
-		"Scratchblock4Hook::sb4Setup"
-	],
 	"ResourceModules": {
 		"ext.scratchBlocks4": {
 			"scripts": [

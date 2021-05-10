@@ -16,11 +16,6 @@ class Scratchblock4Hook {
 		return true;
 	}
 
-	public static function sb4Setup() {
-		global $wgOut;
-		$wgOut->addModules('ext.scratchBlocks4');
-	}
-
 	public static function sb4RenderTagGeneric($input, array $args, $tag) {
 		return (
 			'<'
@@ -37,11 +32,13 @@ class Scratchblock4Hook {
 
 	// Output HTML for <scratchblocks> tag
 	public static function sb4RenderTag ($input, array $args, Parser $parser, PPFrame $frame) {
+		$parser->getOutput()->addModules('ext.scratchBlocks4');
 		return self::sb4RenderTagGeneric($input, $args, 'pre');
 	}
 
 	// Output HTML for inline <sb> tag
 	public static function sb4RenderInlineTag ($input, array $args, Parser $parser, PPFrame $frame) {
+		$parser->getOutput()->addModules('ext.scratchBlocks4');
 		return self::sb4RenderTagGeneric($input, $args, 'code');
 	}
 }
