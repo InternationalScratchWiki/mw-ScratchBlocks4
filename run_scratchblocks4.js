@@ -21,7 +21,6 @@ function run_scratchblocks() {
 	var item;
 	for (var i = items.length; i--;) {
 		item = items[i];
-		item.setAttribute('viewBox', '0 0 ' + item.width.baseVal.value + ' ' + item.children[1].getBoundingClientRect().height);
 		item.width.baseVal.value *= 0.675;
 		item.height.baseVal.value = item.viewBox.baseVal.height * 0.675;
 	}
