@@ -11,7 +11,7 @@ Transforms `<scratchblocks>` tags inside wiki articles into `<pre class="blocks"
 This repository no longer uses Git submodules. You do **not** need to include the `--recursive` option.
 ```bash
 $ cd extensions
-$ git clone http://github.com/apple502j/mw-ScratchBlocks4
+$ git clone http://github.com/InternationalScratchWiki/mw-ScratchBlocks4
 ```
 After cloning, add the line
 ```php
