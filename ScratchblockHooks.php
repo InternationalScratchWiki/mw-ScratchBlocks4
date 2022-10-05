@@ -28,17 +28,10 @@ class Scratchblock4Hook {
 
 	public static function sb4RenderTagGeneric($input, array $args, $parser, $tag) {
 		self::sb4Setup($parser);
-		return (
-			'<'
-			. $tag
-			. ' class="blocks'
-			. (isset($args['version']) ? '-' . htmlspecialchars($args['version']) : '')
-			. '">'
-			. htmlspecialchars($input)
-			. '</'
-			. $tag
-			. '>'
-		);
+		return Html::element($tag, [
+			'class' => 'blocks' . (isset($args['version']) ? '-' . $args['version'] : ''),
+			$input
+		]);
 	}
 
 	// Output HTML for <scratchblocks> tag
