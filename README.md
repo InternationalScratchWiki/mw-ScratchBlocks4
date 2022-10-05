@@ -1,4 +1,4 @@
-A simple MediaWiki extension for rendering Scratch Blocks used on Scratch 3.0.
+A simple MediaWiki extension for rendering Scratch Blocks used on Scratch 3.0. Supports MediaWiki 1.29+.
 
 Transforms `<scratchblocks>` tags inside wiki articles into `<pre class="blocks">` in the HTML, which are then rendered to scratch blocks using CSS and JS included in the page. Inline blocks are rendered with `<sb>` tags, and become `<code class="blocks">` tags.
 

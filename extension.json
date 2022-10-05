@@ -19,7 +19,23 @@
 				"run_scratchblocks4.js"
 			],
 			"styles": "/inline.css",
-			"dependencies": []
+			"dependencies": [
+				"ext.scratchBlocks4.sb",
+				"ext.scratchBlocks4.translations"
+			]
+		},
+		"ext.scratchBlocks4.sb": {
+			"scripts": [
+				"lib/scratchblocks.min.js"
+			]
+		},
+		"ext.scratchBlocks4.translations": {
+			"scripts": [
+				"lib/translations-all.js"
+			],
+			"dependencies": [
+				"ext.scratchBlocks4.sb"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -40,8 +56,15 @@
 		]
 	},
 	"config": {
-		"ScratchBlocks4Langs": [],
-		"ScratchBlocks4BlockVersion": "3.0"
+		"ScratchBlocks4Langs": {
+			"value": []
+		},
+		"ScratchBlocks4BlockVersion": {
+			"value": "3.0"
+		}
 	},
-	"manifest_version": 1
+	"manifest_version": 2,
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	}
 }
