@@ -56,8 +56,15 @@
 		]
 	},
 	"config": {
-		"ScratchBlocks4Langs": [],
-		"ScratchBlocks4BlockVersion": "3.0"
+		"ScratchBlocks4Langs": {
+			"value": []
+		},
+		"ScratchBlocks4BlockVersion": {
+			"value": "3.0"
+		}
 	},
-	"manifest_version": 1
+	"manifest_version": 2,
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	}
 }
