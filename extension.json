@@ -43,12 +43,13 @@
 		"remoteExtPath": "mw-ScratchBlocks4"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"Scratchblock4Hook::sb4ParserInit"
-		],
-		"ResourceLoaderGetConfigVars": [
-			"Scratchblock4Hook::sb4ReadLS"
-		]
+		"ParserFirstCallInit": "main",
+		"ResourceLoaderGetConfigVars": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "Scratchblock4Hook"
+		}
 	},
 	"MessagesDirs": {
 		"ScratchBlocks4": [
@@ -65,6 +66,6 @@
 	},
 	"manifest_version": 2,
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.35.0"
 	}
 }

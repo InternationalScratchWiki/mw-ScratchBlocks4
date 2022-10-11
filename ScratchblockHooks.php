@@ -1,22 +1,24 @@
 <?php
+
+use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
+
 define('SB4_MODULE_KEY', 'ext.scratchBlocks4');
 
-class Scratchblock4Hook {
+class Scratchblock4Hook implements ParserFirstCallInitHook, ResourceLoaderGetConfigVarsHook {
 	// Ouput HTML for <scratchblocks> tag
 
-	public static function sb4ParserInit (Parser $parser) {
+	public function onParserFirstCallInit($parser) {
 		// Register <scratchblocks> and <sb> tag
-		$parser->setHook('scratchblocks', array( "Scratchblock4Hook", 'sb4RenderTag') );
-		$parser->setHook('sb', array( "Scratchblock4Hook", 'sb4RenderInlineTag') );
+		$parser->setHook('scratchblocks', array("Scratchblock4Hook", 'sb4RenderTag'));
+		$parser->setHook('sb', array("Scratchblock4Hook", 'sb4RenderInlineTag'));
 		//throw new Exception(var_dump($parser));
 		return true;
 	}
 
-	public static function sb4ReadLS (array &$vars) {
-		global $wgScratchBlocks4Langs, $wgScratchBlocks4BlockVersion;
-		$vars['wgScratchBlocks4Langs'] = $wgScratchBlocks4Langs;
-		$vars['wgScratchBlocks4BlockVersion'] = $wgScratchBlocks4BlockVersion;
-		return true;
+	public function onResourceLoaderGetConfigVars(array &$vars, $skin, Config $config): void {
+		$vars['wgScratchBlocks4Langs'] = $config->get('ScratchBlocks4Langs');
+		$vars['wgScratchBlocks4BlockVersion'] = $config->get('ScratchBlocks4BlockVersion');
 	}
 
 	public static function sb4Setup(Parser $parser) {
@@ -34,13 +36,12 @@ class Scratchblock4Hook {
 	}
 
 	// Output HTML for <scratchblocks> tag
-	public static function sb4RenderTag ($input, array $args, Parser $parser, PPFrame $frame) {
+	public static function sb4RenderTag($input, array $args, Parser $parser, PPFrame $frame) {
 		return self::sb4RenderTagGeneric($input, $args, $parser, 'pre');
 	}
 
 	// Output HTML for inline <sb> tag
-	public static function sb4RenderInlineTag ($input, array $args, Parser $parser, PPFrame $frame) {
+	public static function sb4RenderInlineTag($input, array $args, Parser $parser, PPFrame $frame) {
 		return self::sb4RenderTagGeneric($input, $args, $parser, 'code');
 	}
 }
-?>
