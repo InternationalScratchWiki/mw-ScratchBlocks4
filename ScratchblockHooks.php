@@ -24,7 +24,7 @@ class Scratchblock4Hook implements ParserFirstCallInitHook, ResourceLoaderGetCon
 	public static function sb4Setup(Parser $parser) {
 		$out = $parser->getOutput();
 		if (!in_array(SB4_MODULE_KEY, $out->getModules())) {
-			$out->addModules(SB4_MODULE_KEY);
+			$out->addModules([ SB4_MODULE_KEY ]);
 		}
 	}
 
