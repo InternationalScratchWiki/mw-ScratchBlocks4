@@ -5,18 +5,16 @@ mw.hook('wikipage.content').add(function run_scratchblocks() {
 	if (version == 2 || version[0] == '2') { // to handle '2.0'
 		version = 'scratch2';
 	} else {
-		version = 'scratch3';
+		version = (version === 'hc-3' || version === 'hc-3.0') ? 'scratch3-high-contrast' : 'scratch3';
 		scale = 0.675;
 	}
 	var langs = ['en'].concat(mw.config.get('wgScratchBlocks4Langs'));
 	scratchblocks.renderMatching('pre.blocks', { languages: langs, style: version, scale: scale });
 	scratchblocks.renderMatching('code.blocks', { languages: langs, style: version, inline: true, scale: scale });
+	scratchblocks.renderMatching('pre[class^=blocks-hc-3]', { languages: langs, style: 'scratch3-high-contrast', scale: 0.675 });
+	scratchblocks.renderMatching('code[class^=blocks-hc-3]', { languages: langs, style: 'scratch3-high-contrast', inline: true, scale: 0.675 });
 	scratchblocks.renderMatching('pre[class^=blocks-3]', { languages: langs, style: 'scratch3', scale: 0.675 });
 	scratchblocks.renderMatching('code[class^=blocks-3]', { languages: langs, style: 'scratch3', inline: true, scale: 0.675 });
 	scratchblocks.renderMatching('pre[class^=blocks-2]', { languages: langs, style: 'scratch2' });
 	scratchblocks.renderMatching('code[class^=blocks-2]', { languages: langs, style: 'scratch2', inline: true });
-	var query = '[class^=blocks-3] .scratchblocks svg';
-	if (version === 'scratch3') {
-		query = '.blocks .scratchblocks svg, ' + query;
-	}
 });
