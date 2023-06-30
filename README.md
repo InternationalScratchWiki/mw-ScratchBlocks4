@@ -2,7 +2,7 @@ A simple MediaWiki extension for rendering Scratch Blocks used on Scratch 3.0. S
 
 Transforms `<scratchblocks>` tags inside wiki articles into `<pre class="blocks">` in the HTML, which are then rendered to scratch blocks using CSS and JS included in the page. Inline blocks are rendered with `<sb>` tags, and become `<code class="blocks">` tags.
 
-Use `version` attribute to set the version. Valid values are `2`, `3`, and `3-hc` (for High Contrast colors).
+Use `version` attribute to set the version. Valid values are `2`, `3`, and `hc-3` (for High Contrast colors).
 
 - Maintained by apple502j.
 - Contributed to by Kenny2github
@@ -26,3 +26,5 @@ $wgScratchBlocks4Langs = ['ja', 'zh_TW'];
 Note that the TW is preceded by an underscore rather than a hyphen.
 
 This variable is accessible through JavaScript via `mw.config.get("wgScratchBlocks4Lang")`.
+
+Use `$wgScratchBlocks4BlockVersion` to specify the default version. Valid values are `2`, `3`, and `hc-3` (for High Contrast colors).
