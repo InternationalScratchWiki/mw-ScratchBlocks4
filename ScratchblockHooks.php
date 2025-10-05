@@ -30,7 +30,13 @@ class Scratchblock4Hook implements ParserFirstCallInitHook, ResourceLoaderGetCon
 
 	public static function sb4RenderTagGeneric($input, array $args, $parser, $tag) {
 		self::sb4Setup($parser);
-		return Html::element($tag, [
+		if ( class_exists( 'MediaWiki\\Html\\Html' ) ) {
+			// MW 1.40+
+			$htmlClass = \MediaWiki\Html\Html::class;
+		} else {
+			$htmlClass = \Html::class;
+		}
+		return $htmlClass::element($tag, [
 			'class' => 'blocks' . (isset($args['version']) ? '-' . $args['version'] : '')
 		], $input);
 	}
